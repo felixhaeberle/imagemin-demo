@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var using = require('gulp-using');
 var grep = require('gulp-grep');
 var changed = require('gulp-changed');
-var del = require('del');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin'); // TODO 1 : Install with 'npm install gulp-imagemin' and import it
 var sass = require('gulp-sass');
@@ -21,7 +20,7 @@ var paths = {
 
 // TODO 2 : Configure imagemin
 
-/*
+
 gulp.task('images', function () {
   return gulp.src(paths.images)
     .pipe(imagemin([
@@ -46,7 +45,6 @@ gulp.task('images', function () {
     ]))
     .pipe(gulp.dest(paths.dirs.build.images));
 });
-*/
 
 gulp.task('sass', function () {
   return gulp.src(paths.sass)
@@ -64,7 +62,7 @@ gulp.task('sass', function () {
 
 // TODO 3
 
-gulp.task('app', gulp.parallel(/*'images',*/ 'sass')); // TODO 3 : Execute imagemin
+gulp.task('app', gulp.parallel('images', 'sass')); // TODO 3 : Execute imagemin
 gulp.task('all', gulp.parallel('app'));
 gulp.task('build', gulp.series('all'));
 
