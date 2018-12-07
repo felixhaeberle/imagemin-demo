@@ -1,0 +1,33 @@
+{
+  "name": "imagemin-demo",
+  "version": "1.0.0",
+  "description": "A demo for imagemin gulp preprocessing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixhaeberle/imagemin-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felixhaeberle/imagemin-demo/issues"
+  },
+  "homepage": "https://github.com/felixhaeberle/imagemin-demo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-grep": "^0.2.0",
+    "gulp-using": "^0.1.1"
+  }
+}

@@ -1,0 +1,67 @@
+body {
+  text-align: center;
+  > #container {
+    text-align:left;
+    margin:0 auto;
+    width:500px;
+  }
+}
+
+
+header {
+  h1 {
+    font-size:26px; margin-bottom:26px;
+  }
+}
+div[role="main"] {
+  background: lightcyan;
+  border-radius: 4px; 
+  border:3px solid floralwhite;
+  padding: 10px;
+  margin-bottom:25px; 
+  
+  ul {
+    padding-top:14px;
+  }
+  li {
+    color: #eeeeee;
+    margin-bottom:12px;
+  }
+}
+
+
+/* 
+Sample mixin which creates a button and the following states (based on classes): 
+- primary
+- disabled
+(based on pseudo-selector)
+- :hover {}
+*/
+
+
+button{
+  border: lightsalmon solid #acbed3;
+  //brings in Compass' background-image mixin:  http://compass-style.org/reference/compass/css3/images/
+  background: rosybrown;
+  padding:3px 14px;
+  font-size:12px;
+  color:#3b557d;
+  //brings in Compass' border-radius mixin: http://compass-style.org/reference/compass/css3/border_radius/
+  border-radius: 2px;
+  cursor:pointer;
+  
+  //& attribute adds 
+  
+  &.primary {
+    border: 2px solid #3b557d; 
+    padding:5px 15px; 
+    //requires a $border-radius variable
+    border-radius: 4px; 
+  }
+  &.disabled {
+    opacity: .8;
+  }
+  &:hover {
+    background: bisque;
+  } 
+}
